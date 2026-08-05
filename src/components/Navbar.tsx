@@ -1,5 +1,5 @@
-import logo from "../assets/crimson-ronin-logo.png"
-import samurai from "../assets/samurai.png"
+import logo from "../assets/icons/crimson-ronin-logo.png"
+import samurai from "../assets/icons/samurai.png"
 import {Link, NavLink} from "react-router";
 import {navLinks} from "../shared/navLinks.ts";
 import type {NavLinks} from "../types";
@@ -18,14 +18,15 @@ export const Navbar = () => {
 					</Link>
 					
 					<ul className={"flex items-center gap-6"}>
-						{navLinks.map(({href, title}: NavLinks) => (
-							<li key={title} className={"text-[#ffffff99] text-[14px] hover:text-wuxia transition-colors duration-300"}>
-								<NavLink to={href}>{title}</NavLink>
+						{navLinks.map(({href, title, icon: Icon}: NavLinks) => (
+							<li key={title} className={"flex items-center text-[#ffffff99] hover:text-wuxia text-[14px] transition-colors duration-300 gap-1"} >
+								<NavLink className={({isActive}) => isActive ? "text-wuxia" : ""} to={href}>{title}</NavLink>
+								{Icon && <Icon size={18}/>}
 							</li>
 						))}
 					</ul>
 					
-					<img draggable={false} className={"w-8"} src={samurai} alt=""/>
+					<Link to={"/"}><img draggable={false} className={"w-8"} src={samurai} alt=""/></Link>
 				</nav>
 			</header>
 		</>

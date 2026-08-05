@@ -2,7 +2,7 @@
 @import "tailwindcss";
 
 @theme {
-    --font-long-cang: "Long Cang" cursive;
+    --font-long-cang: "Long Cang", cursive;
 }
 
 @theme {
