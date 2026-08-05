@@ -17,9 +17,9 @@ export const Navbar = () => {
 						ronin
 					</Link>
 					
-					<ul className={"flex items-center gap-6"}>
+					<ul className={"flex items-center font-marcellus gap-6"}>
 						{navLinks.map(({href, title, icon: Icon}: NavLinks) => (
-							<li key={title} className={"flex items-center text-[#ffffff99] hover:text-wuxia text-[14px] transition-colors duration-300 gap-1"} >
+							<li key={title} className={"flex items-center text-[#ffffff99] hover:text-wuxia text-[13px] transition-colors duration-300 gap-1"} >
 								<NavLink className={({isActive}) => isActive ? "text-wuxia" : ""} to={href}>{title}</NavLink>
 								{Icon && <Icon size={18}/>}
 							</li>
