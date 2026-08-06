@@ -3,7 +3,7 @@ import Homepage from "./pages/Homepage.tsx";
 
 const App = () => {
 	return (
-		<div className={"min-h-screen"}>
+		<div className={""}>
 			<Routes>
 				<Route path="/" element={<Homepage/>} />
 			</Routes>

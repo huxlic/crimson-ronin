@@ -6,3 +6,9 @@ export interface NavLinks {
 	title: string,
 	icon?: LucideIcon,
 }
+
+export interface PurchaseStore {
+	link: string;
+	image: string;
+	alt: string;
+}
