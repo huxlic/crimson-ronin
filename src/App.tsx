@@ -3,7 +3,7 @@ import {navLinks} from "./shared/navLinks.ts";
 
 const App = () => {
 	return (
-		<div className={"min-h-screen bg-black"}>
+		<div className={"min-h-screen"}>
 			<Routes>
 				{navLinks.map(({href, element: Element}) => (
 					Element && <Route key={href} path={href} element={<Element/>} />
