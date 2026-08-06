@@ -34,10 +34,10 @@ export const Hero = () => {
 				<div
 					className="relative w-full h-full flex flex-col items-center justify-between py-20 pb-10 px-8 md:px-16 box-border">
 					<div className="w-full relative flex justify-between">
-						<img src={ronin_seal} className={"z-0 w-30 md:w-40 lg:w-50 animate-pulse"}
+						<img src={ronin_seal} className={"z-0 w-30 blur-[2px] md:w-40 lg:w-50 animate-ping"}
 						     alt="a seal showing crimson ronin written in japanese"/>
 						<h1
-							className={"z-10 font-long-cang font-black leading-10 lg:leading-15 text-4xl md:text-6xl lg:text-8xl text-wuxia/80 break-all select-none"}>CRIMSON<br/>
+							className={"z-10 blur-[2px] text-end font-long-cang font-black text-4xl md:text-6xl lg:text-8xl text-wuxia/80 break-all select-none"}>CRIMSON<br/>
 							RONIN
 						</h1>
 					</div>
@@ -54,7 +54,7 @@ export const Hero = () => {
 							     alt="a gold buy now cta"/>
 						</Link>
 						
-						<div className="w-full flex flex-wrap gap-4 justify-around items-center -mb-4">
+						<div className="w-full flex flex-wrap gap-4 justify-evenly items-center -mb-4">
 							{purchaseStore.map(({link, image, alt}: PurchaseStore) => (
 								<a key={alt} href={link}>
 									<img className={"h-4 sm:h-5 invert-25 hover:invert-0 transition-all"} src={image} alt={alt} />

@@ -55,7 +55,7 @@ export const Navbar = () => {
 
 					{/* Mobile menu dropdown */}
 					{isMobileMenuOpen && (
-						<div className="md:hidden absolute top-full left-0 right-0 bg-[#0D0F11] py-6 border-t border-white/10 animate-slide-down">
+						<div className="md:hidden absolute top-full left-0 right-0 bg-[#0D0F11] py-6 border-t border-white/10">
 							<ul className="flex flex-col items-center gap-4 font-marcellus">
 								{navLinks.map(({href, title, icon: Icon}: NavLinks) => (
 									<li key={title} className="w-full text-center">

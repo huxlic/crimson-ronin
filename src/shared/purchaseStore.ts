@@ -8,7 +8,7 @@ const purchaseStore: PurchaseStore[] = [
 	{link: "https://store.playstation.com/", image: playstation, alt: "PS5"},
 	{link: "https://www.xbox.com/games/store/", image: xbox, alt: "XBOX"},
 	{link: "https://store.steampowered.com/", image: steam, alt: "STEAM"},
-	{link: "https://store.epicgames.com/p/crimson-desert-6d6135", image: epic, alt: "EPIC GAMES"},
+	{link: "https://store.epicgames.com/", image: epic, alt: "EPIC GAMES"},
 ]
 
 export default purchaseStore;
