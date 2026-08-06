@@ -25,7 +25,7 @@ const Homepage = () => {
 						}}>
 							<ambientLight intensity={0.6}/>
 							<directionalLight position={[3, 5, 2]} intensity={1.5}/>
-							<Samurai position={[0, -11, 0]} scale={0.08}/>
+							<Samurai position={[0, -11, 0]} scale={0.075}/>
 							<OrbitControls key={location.pathname} autoRotate={true} enableRotate={false}
 							               enableZoom={false}
 							               minPolarAngle={Math.PI / 2}

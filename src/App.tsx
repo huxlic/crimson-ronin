@@ -1,13 +1,11 @@
 import {Route, Routes} from "react-router";
-import {navLinks} from "./shared/navLinks.ts";
+import Homepage from "./pages/Homepage.tsx";
 
 const App = () => {
 	return (
 		<div className={"min-h-screen"}>
 			<Routes>
-				{navLinks.map(({href, element: Element}) => (
-					Element && <Route key={href} path={href} element={<Element/>} />
-				))}
+				<Route path="/" element={<Homepage/>} />
 			</Routes>
 		</div>
 	)
