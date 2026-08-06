@@ -28,17 +28,17 @@ const Homepage = () => {
 									<Samurai scale={0.08} position={[1, 8, 0]}/>
 								</Center>
 							</Suspense>
-							<OrbitControls autoRotate={true} enableZoom={false} minPolarAngle={Math.PI / 2}
+							<OrbitControls autoRotate={true} enableRotate={false} enableZoom={false} minPolarAngle={Math.PI / 2}
 							               maxPolarAngle={Math.PI / 2}/>
 						</Canvas>
 					</div>
 					
-					<div className="relative w-full h-full flex flex-col items-center justify-between p-16 box-border">
-						<div className="relative flex flex-col items-center">
-							<img src={ronin_seal} className={"-rotate-90  z-0 w-50 animate-pulse"}
+					<div className="relative w-full h-full flex flex-col items-center justify-between py-20 px-8 md:px-16 box-border">
+						<div className="w-full relative flex justify-between">
+							<img src={ronin_seal} className={"z-0 w-30 md:w-40 lg:w-50 animate-pulse"}
 							     alt="a seal showing crimson ronin written in japanese"/>
 							<h1
-								className={"absolute w-max z-10 font-long-cang font-black text-8xl text-wuxia mask-b-from-50%"}>CRIMSON
+								className={"z-10 font-long-cang font-black leading-10 lg:leading-15 text-4xl md:text-6xl lg:text-8xl text-wuxia mask-b-from-50% break-all"}>CRIMSON<br/>
 								RONIN
 							</h1>
 						</div>
