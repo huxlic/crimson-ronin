@@ -3,13 +3,12 @@ import {Canvas} from "@react-three/fiber";
 import Samurai from "../models/Samurai.tsx";
 import {OrbitControls} from "@react-three/drei";
 import ronin_seal from "../../assets/images/ronin-seal.png";
-import {Link, useLocation} from "react-router";
-import buy_now from "../../assets/images/buy-now.png";
+import {Link} from "react-router";
+import buy_btn from "../../assets/images/buy-btn.png";
 import type {PurchaseStore} from "../../types";
 import purchaseStore from "../../shared/purchaseStore.ts";
 
 export const Hero = () => {
-	const location = useLocation();
 	return (
 		<>
 			<section className={"relative h-screen overflow-hidden flex items-center justify-center box-border"}>
@@ -24,7 +23,7 @@ export const Hero = () => {
 						<ambientLight intensity={0.6}/>
 						<directionalLight position={[3, 5, 2]} intensity={1.5}/>
 						<Samurai position={[0, -11, 0]} scale={0.075}/>
-						<OrbitControls key={location.pathname} autoRotate={true} enableRotate={false}
+						<OrbitControls autoRotate={true} enableRotate={true}
 						               enableZoom={false}
 						               minPolarAngle={Math.PI / 2}
 						               maxPolarAngle={Math.PI / 2}/>
@@ -48,16 +47,21 @@ export const Hero = () => {
 							finds you first.
 						</p>
 						
-						<Link className={""} to={"https://store.steampowered.com/"} target={"_blank"}>
-							<img draggable={false} src={buy_now}
-							     className={"w-20 sm:w-28 md:w-36 lg:w-40 xl:w-50 hover:scale-105 transition-transform duration-300"}
+						<Link className={"relative"} to={"https://store.steampowered.com/"} target={"_blank"}>
+							<img draggable={false} src={buy_btn}
+							     className={"w-28 md:w-36 lg:w-40 xl:w-50 hover:scale-105 transition-transform duration-300"}
 							     alt="a gold buy now cta"/>
+							<div
+								className="absolute inset-0 flex items-center justify-center font-marcellus font-black text-white text-[12px] md:text-[14px] lg:text-[16px]">
+								<span className={""}>Buy now</span>
+							</div>
 						</Link>
 						
 						<div className="w-full flex flex-wrap gap-4 justify-evenly items-center -mb-4">
 							{purchaseStore.map(({link, image, alt}: PurchaseStore) => (
 								<a key={alt} href={link}>
-									<img className={"h-4 sm:h-5 invert-25 hover:invert-0 transition-all"} src={image} alt={alt} />
+									<img className={"h-4 sm:h-5 invert-25 hover:invert-0 transition-all"} src={image}
+									     alt={alt}/>
 								</a>
 							))}
 						</div>

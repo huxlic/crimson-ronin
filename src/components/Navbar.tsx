@@ -43,7 +43,7 @@ export const Navbar = () => {
 							<li key={title}
 							    className="text-[#ffffff99] hover:text-wuxia text-[12px] sm:text-sm transition-colors duration-300 gap-1 whitespace-nowrap">
 								<NavLink
-									className={({isActive}) => isActive ? "text-wuxia flex items-center " : "flex items-center "}
+									className={"flex items-center"}
 									to={href}>{title} {Icon && <Icon size={18}/>}</NavLink>
 							</li>))}
 					</ul>
