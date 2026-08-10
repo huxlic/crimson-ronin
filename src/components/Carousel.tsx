@@ -58,7 +58,7 @@ export const Carousel = () => {
 		<>
 			<div className="relative w-full h-full">
 				<div
-					className="w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[75vh] overflow-scroll scrollbar-none">
+					className="w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[75vh] overflow-hidden scrollbar-none">
 					<div ref={trackRef} className="relative h-full w-[400%] flex">
 						{latestNews.map((news) => (
 							<Article key={news.id} {...news} />
@@ -70,7 +70,7 @@ export const Carousel = () => {
 						<button
 							key={i}
 							onClick={() => handleManualNav(() => goToSlide(i))}
-							className={clsx("h-0.5 transition-all cursor-pointer", i === active ? "bg-white w-8" : "bg-white/40 w-6")}
+							className={clsx("h-[1.5px] transition-all cursor-pointer", i === active ? "bg-white w-8" : "bg-white/40 w-7")}
 							aria-label={`Go to slide ${i + 1}`}
 						/>
 					))}

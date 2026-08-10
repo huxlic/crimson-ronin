@@ -1,5 +1,6 @@
 import type {NewsItem} from "../types";
 import noise from '../assets/images/noise.png';
+import item_msg from '../assets/images/item-msg.png'
 
 export const Article = ({id, title, date, excerpt, image}: NewsItem) => {
 	return (
@@ -28,6 +29,8 @@ export const Article = ({id, title, date, excerpt, image}: NewsItem) => {
 					<p className="mb-6 text-sm sm:text-base text-white/60 leading-relaxed line-clamp-3">
 						{excerpt}
 					</p>
+					
+					<div className="w-full h-20 absolute lef-0 right-0 bottom-0 z-10 bg-top" style={{backgroundImage: `url(${item_msg})`}}></div>
 				</div>
 			</article>
 		</>
