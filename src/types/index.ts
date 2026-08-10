@@ -19,4 +19,5 @@ export interface NewsItem {
 	date: string;
 	excerpt: string;
 	link?: string;
+	image: string;
 }
