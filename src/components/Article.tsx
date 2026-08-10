@@ -1,15 +1,16 @@
 import type {NewsItem} from "../types";
+import noise from '../assets/images/noise.png';
 
-export const Article = ({id, title, date, excerpt, link, image}: NewsItem) => {
+export const Article = ({id, title, date, excerpt, image}: NewsItem) => {
 	return (
 		<>
 			<article
 				key={id}
-				className="w-full h-full group relative flex-1 bg-no-repeat bg-top bg-cover"
+				className={`relative w-full h-full group flex-1 bg-no-repeat bg-top bg-cover`}
 				style={{backgroundImage: `url(${image})`}}
 			>
-				<div className=""></div>
-				<div className="p-6 sm:p-8">
+				<div className="absolute inset-0" style={{backgroundImage: `url(${noise})`}}></div>
+				<div className="absolute inset-0 p-6 sm:p-8 z-10">
 					{/* Date Badge */}
 					<time
 						className="mb-4 inline-block px-3 py-1 text-xs font-marcellus uppercase tracking-wider text-wuxia/70 bg-wuxia/10 border border-wuxia/20 rounded-full"
