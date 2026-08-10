@@ -12,3 +12,11 @@ export interface PurchaseStore {
 	image: string;
 	alt: string;
 }
+
+export interface NewsItem {
+	id: number;
+	title: string;
+	date: string;
+	excerpt: string;
+	link?: string;
+}
