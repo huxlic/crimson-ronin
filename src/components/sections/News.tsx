@@ -1,10 +1,8 @@
 import trailer from "../../assets/videos/crimson-trailer-video.mp4";
-import latestNews from "../../shared/latestNews.ts";
-import {Article} from "../Article.tsx";
-import left_arrow from "../../assets/icons/left-arrow.png";
-import right_arrow from "../../assets/icons/right-arrow.png";
+import {Carousel} from "../Carousel.tsx";
 
 export const News = () => {
+	
 	return (
 		<>
 			<section className="relative min-h-screen overflow-hidden">
@@ -35,24 +33,7 @@ export const News = () => {
 					</div>
 					
 					{/* News Grid */}
-					<div className="relative w-full h-full">
-						<div
-							className="w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[75vh] overflow-scroll scrollbar-none">
-							<div className="relative h-full w-[400%] flex">
-								{latestNews.map((news) => (
-									<Article key={news.id} {...news} />
-								))}
-							</div>
-						</div>
-						
-						<button className={"absolute left-0 top-1/2 -translate-y-1/2 invert-30 hover:invert-0 z-10"}>
-							<img draggable={false} className={""} src={left_arrow} alt="left arrow"/>
-						</button>
-						<button className={"absolute right-0 top-1/2 -translate-y-1/2 invert-30 hover:invert-0 z-10"}>
-							<img draggable={false} className={""} src={right_arrow} alt="right arrow"/>
-						</button>
-					</div>
-					
+					<Carousel/>
 				</div>
 			</section>
 		</>
