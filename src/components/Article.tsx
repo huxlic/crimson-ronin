@@ -2,35 +2,38 @@ import type {NewsItem} from "../types";
 import noise from '../assets/images/noise.png';
 import item_msg from '../assets/images/item-msg.png'
 
-export const Article = ({id, title, date, excerpt, image}: NewsItem) => {
+export const Article = ({id, title, date, excerpt, image, category}: NewsItem) => {
 	return (
 		<>
 			<article
 				key={id}
-				className={`relative w-full h-full group flex-1 bg-no-repeat bg-top bg-cover`}
+				className={`relative w-full h-full flex-1 bg-no-repeat bg-top bg-cover select-none`}
 				style={{backgroundImage: `url(${image})`}}
 			>
-				<div className="absolute inset-0" style={{backgroundImage: `url(${noise})`}}></div>
+				<div className="absolute inset-0 bg-wuxia-red/30" style={{backgroundImage: `url(${noise})`}}></div>
 				<div className="absolute inset-0 p-6 sm:p-8 z-10">
-					{/* Date Badge */}
-					<time
-						className="mb-4 inline-block px-3 py-1 text-xs font-marcellus uppercase tracking-wider text-wuxia/70 bg-wuxia/10 border border-wuxia/20 rounded-full"
-						dateTime={date}
-					>
-						{date}
-					</time>
-					
-					{/* Title */}
-					<h3 className="mb-4 font-long-cang font-bold text-xl sm:text-2xl text-white/95 group-hover:text-wuxia transition-colors duration-300 leading-tight">
+					<h3 className="mb-4 font-long-cang font-bold text-xl sm:text-5xl uppercase text-white/95 transition-colors duration-300">
 						{title}
 					</h3>
 					
-					{/* Excerpt */}
-					<p className="mb-6 text-sm sm:text-base text-white/60 leading-relaxed line-clamp-3">
-						{excerpt}
-					</p>
-					
-					<div className="w-full h-20 absolute lef-0 right-0 bottom-0 z-10 bg-top" style={{backgroundImage: `url(${item_msg})`}}></div>
+					<div className="w-full h-20 flex flex-col justify-between absolute left-0 right-0 bottom-0 z-10 bg-top font-marcellus box-border p-4" style={{backgroundImage: `url(${item_msg})`}}>
+						<p className={"text-wuxia text-[10px] md:text-[11px] flex gap-2 font-semibold"}>
+							<time
+								className=""
+								dateTime={date}
+							>
+								{date}
+							</time>
+							
+							<span className={"uppercase"}>
+								{category}
+							</span>
+						</p>
+						
+						<p className="text-white text-[16px] md:text-[18px] line-clamp-1">
+							{excerpt}
+						</p>
+					</div>
 				</div>
 			</article>
 		</>

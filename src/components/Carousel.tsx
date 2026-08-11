@@ -38,7 +38,7 @@ export const Carousel = () => {
 	useGSAP(() => {
 		if (!trackRef.current) return;
 		gsap.to(trackRef.current, {
-			xPercent: -25 * active,
+			xPercent: -(100 / latestNews.length) * active,
 			duration: 0.8,
 			ease: 'power3.inOut',
 		})
@@ -56,10 +56,10 @@ export const Carousel = () => {
 	
 	return (
 		<>
-			<div className="relative w-full h-full">
+			<div className="relative w-full h-full ">
 				<div
-					className="w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[75vh] overflow-hidden scrollbar-none">
-					<div ref={trackRef} className="relative h-full w-[400%] flex">
+					className="w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[75vh] overflow-hidden scrollbar-none shadow-wuxia-red/20 shadow-[0_-4px_20px_8px_rgba(0,0,0,0.1)] rounded-sm">
+					<div ref={trackRef} className="relative h-full w-[500%] flex">
 						{latestNews.map((news) => (
 							<Article key={news.id} {...news} />
 						))}

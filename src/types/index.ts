@@ -20,4 +20,5 @@ export interface NewsItem {
 	excerpt: string;
 	link?: string;
 	image: string;
+	category: "Announcement" | "Update" | "Media" | "Lore";
 }
