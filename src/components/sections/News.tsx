@@ -5,7 +5,7 @@ export const News = () => {
 	
 	return (
 		<>
-			<section className="relative min-h-screen overflow-hidden">
+			<section className="relative overflow-hidden">
 				{/* Video Background */}
 				<video
 					className="absolute inset-0 w-full h-full object-cover"
