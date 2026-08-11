@@ -2,6 +2,8 @@ import background_texture from "../../assets/images/background-texture.png";
 import {WeaponDisplay} from "../WeaponDisplay.tsx";
 import weapons from "../../shared/weapons.ts";
 import {useState} from "react";
+import button_texture from "../../assets/images/button-texture.png";
+import clsx from "clsx";
 
 export const Weapons = () => {
 	const [currentWeaponIndex, setCurrentWeaponIndex] = useState(0);
@@ -9,13 +11,15 @@ export const Weapons = () => {
 	return (
 		<>
 			<section style={{backgroundImage: `url(${background_texture})`}}
-			         className={"relative h-screen bg-no-repeat bg-cover overflow-hidden"}>
-				<WeaponDisplay ModelComponent={weapons[currentWeaponIndex].model}/>
+			         className={"w-full relative h-screen bg-no-repeat bg-cover overflow-hidden"}>
+				<WeaponDisplay ModelComponent={weapons[currentWeaponIndex].model} {...weapons[currentWeaponIndex]} />
 				
-				<div className="flex">
+				<div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-7 gap-2 absolute bottom-0 w-full">
 					{weapons.map((weapon, i) => (
 						<button onClick={() => setCurrentWeaponIndex(i)} key={weapon.name}
-						        className="relative w-full py-2 px-4 bg-gray-800 text-white rounded hover:bg-gray-700 transition-colors duration-300 cursor-pointer">
+						        title={weapon.name}
+						        style={{backgroundImage: `url(${button_texture})`}}
+							        className={clsx("relative w-full text-[14px] lg:text-[16px] line-clamp-1 md:line-clamp-3 box-border text-wuxia font-marcellus font-black py-1 px-2 lg:px-4 border-2 bg-center bg-cover hover:invert-20 transition-all duration-100 cursor-pointer", i === currentWeaponIndex ? "shadow-wuxia shadow-sm border-wuxia-red" : "border-wuxia-red/20 hover:border-wuxia/20")}>
 							{weapon.name}
 						</button>
 					))}

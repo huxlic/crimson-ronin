@@ -1,6 +1,5 @@
-
 import type {LucideIcon} from "lucide-react";
-import React from "react";
+import React, {type ComponentType} from "react";
 
 export interface NavLinks {
 	href: string,
@@ -26,6 +25,22 @@ export interface NewsItem {
 
 export interface Weapon {
 	name: string;
-	model: React.ComponentType<{ position?: [number, number, number] | undefined;
-		rotation?: [number, number, number] | undefined;}>;
+	description: string;
+	model: React.ComponentType<{scale?: number;
+		position?: [number, number, number];
+		rotation?: [number, number, number];}>;
+	scale: number;
+	position: [number, number, number];
+}
+
+export interface WeaponDisplayProps {
+	ModelComponent: ComponentType<{
+		scale?: number;
+		position?: [number, number, number];
+		rotation?: [number, number, number];
+	}>;
+	scale?: number;
+	position?: [number, number, number];
+	name: string;
+	description: string;
 }
