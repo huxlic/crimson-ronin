@@ -19,7 +19,7 @@ export const Weapons = () => {
 						<button onClick={() => setCurrentWeaponIndex(i)} key={weapon.name}
 						        title={weapon.name}
 						        style={{backgroundImage: `url(${button_texture})`}}
-							        className={clsx("relative w-full text-[14px] lg:text-[16px] line-clamp-1 md:line-clamp-3 box-border text-wuxia font-marcellus font-black py-1 px-2 lg:px-4 border-2 bg-center bg-cover hover:invert-20 transition-all duration-100 cursor-pointer", i === currentWeaponIndex ? "shadow-wuxia shadow-sm border-wuxia-red" : "border-wuxia-red/20 hover:border-wuxia/20")}>
+							        className={clsx("relative w-full text-[14px] lg:text-[16px] line-clamp-1 md:line-clamp-3 box-border text-wuxia font-marcellus font-black py-3 px-2 lg:px-4 border-2 bg-center bg-cover hover:invert-20 transition-all duration-100 cursor-pointer", i === currentWeaponIndex ? "shadow-wuxia shadow-sm border-wuxia-red" : "border-wuxia-red/20 hover:border-wuxia/20")}>
 							{weapon.name}
 						</button>
 					))}

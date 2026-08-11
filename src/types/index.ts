@@ -31,6 +31,7 @@ export interface Weapon {
 		rotation?: [number, number, number];}>;
 	scale: number;
 	position: [number, number, number];
+	rotation: [number, number, number];
 }
 
 export interface WeaponDisplayProps {
@@ -41,6 +42,7 @@ export interface WeaponDisplayProps {
 	}>;
 	scale?: number;
 	position?: [number, number, number];
+	rotation?: [number, number, number];
 	name: string;
 	description: string;
 }
