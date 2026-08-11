@@ -30,7 +30,7 @@ type GLTFResult = GLTF & {
   animations: GLTFAction[]
 }
 
-export function Model(props: JSX.IntrinsicElements['group']) {
+export default function OldTheWagasaJapaneseUmbrella(props: JSX.IntrinsicElements['group']) {
   const { nodes, materials } = useGLTF('/models/old_the_wagasa__japanese_umbrella-transformed.glb') as unknown as GLTFResult
   return (
     <group {...props} dispose={null}>

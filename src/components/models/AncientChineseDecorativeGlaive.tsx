@@ -10,50 +10,53 @@ Title: Ancient Chinese Decorative Glaive
 
 import * as THREE from 'three'
 import type {JSX} from 'react'
-import { useGLTF } from '@react-three/drei'
-import type { GLTF } from 'three-stdlib'
+import {useGLTF} from '@react-three/drei'
+import type {GLTF} from 'three-stdlib'
 
 class GLTFAction {
 }
 
 type GLTFResult = GLTF & {
-  nodes: {
-    defaultMaterial: THREE.Mesh
-    defaultMaterial_1: THREE.Mesh
-    defaultMaterial_2: THREE.Mesh
-    defaultMaterial_3: THREE.Mesh
-    defaultMaterial_4: THREE.Mesh
-    defaultMaterial_5: THREE.Mesh
-    defaultMaterial_6: THREE.Mesh
-    defaultMaterial_7: THREE.Mesh
-  }
-  materials: {
-    lambert6SG: THREE.MeshStandardMaterial
-    lambert3SG: THREE.MeshStandardMaterial
-    blinn2SG: THREE.MeshStandardMaterial
-    lambert4SG: THREE.MeshStandardMaterial
-    lambert2SG: THREE.MeshStandardMaterial
-    lambert5SG: THREE.MeshStandardMaterial
-    blinn1SG: THREE.MeshStandardMaterial
-    blinn3SG: THREE.MeshStandardMaterial
-  }
-  animations: GLTFAction[]
+	nodes: {
+		defaultMaterial: THREE.Mesh
+		defaultMaterial_1: THREE.Mesh
+		defaultMaterial_2: THREE.Mesh
+		defaultMaterial_3: THREE.Mesh
+		defaultMaterial_4: THREE.Mesh
+		defaultMaterial_5: THREE.Mesh
+		defaultMaterial_6: THREE.Mesh
+		defaultMaterial_7: THREE.Mesh
+	}
+	materials: {
+		lambert6SG: THREE.MeshStandardMaterial
+		lambert3SG: THREE.MeshStandardMaterial
+		blinn2SG: THREE.MeshStandardMaterial
+		lambert4SG: THREE.MeshStandardMaterial
+		lambert2SG: THREE.MeshStandardMaterial
+		lambert5SG: THREE.MeshStandardMaterial
+		blinn1SG: THREE.MeshStandardMaterial
+		blinn3SG: THREE.MeshStandardMaterial
+	}
+	animations: GLTFAction[]
 }
 
-export function Model(props: JSX.IntrinsicElements['group']) {
-  const { nodes, materials } = useGLTF('/models/ancient_chinese_decorative_glaive-transformed.glb') as unknown as GLTFResult
-  return (
-    <group {...props} dispose={null}>
-      <mesh geometry={nodes.defaultMaterial.geometry} material={materials.lambert6SG} />
-      <mesh geometry={nodes.defaultMaterial_1.geometry} material={materials.lambert3SG} />
-      <mesh geometry={nodes.defaultMaterial_2.geometry} material={materials.blinn2SG} />
-      <mesh geometry={nodes.defaultMaterial_3.geometry} material={materials.lambert4SG} />
-      <mesh geometry={nodes.defaultMaterial_4.geometry} material={materials.lambert2SG} />
-      <mesh geometry={nodes.defaultMaterial_5.geometry} material={materials.lambert5SG} />
-      <mesh geometry={nodes.defaultMaterial_6.geometry} material={materials.blinn1SG} />
-      <mesh geometry={nodes.defaultMaterial_7.geometry} material={materials.blinn3SG} />
-    </group>
-  )
+export default function AncientChineseDecorativeGlaive(props: JSX.IntrinsicElements['group']) {
+	const {
+		nodes,
+		materials
+	} = useGLTF('/models/ancient_chinese_decorative_glaive-transformed.glb') as unknown as GLTFResult
+	return (
+		<group {...props} dispose={null}>
+			<mesh geometry={nodes.defaultMaterial.geometry} material={materials.lambert6SG}/>
+			<mesh geometry={nodes.defaultMaterial_1.geometry} material={materials.lambert3SG}/>
+			<mesh geometry={nodes.defaultMaterial_2.geometry} material={materials.blinn2SG}/>
+			<mesh geometry={nodes.defaultMaterial_3.geometry} material={materials.lambert4SG}/>
+			<mesh geometry={nodes.defaultMaterial_4.geometry} material={materials.lambert2SG}/>
+			<mesh geometry={nodes.defaultMaterial_5.geometry} material={materials.lambert5SG}/>
+			<mesh geometry={nodes.defaultMaterial_6.geometry} material={materials.blinn1SG}/>
+			<mesh geometry={nodes.defaultMaterial_7.geometry} material={materials.blinn3SG}/>
+		</group>
+	)
 }
 
 useGLTF.preload('/models/ancient_chinese_decorative_glaive-transformed.glb')

@@ -64,7 +64,7 @@ type GLTFResult = GLTF & {
   animations: GLTFAction[]
 }
 
-export default function Model(props: JSX.IntrinsicElements['group']) {
+export default function Samurai(props: JSX.IntrinsicElements['group']) {
   const group = React.useRef<THREE.Group>(null)
   const { scene, animations } = useGLTF('/models/samurai-transformed.glb')
   const clone = React.useMemo(() => SkeletonUtils.clone(scene), [scene])

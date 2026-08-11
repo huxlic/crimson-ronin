@@ -32,7 +32,7 @@ type GLTFResult = GLTF & {
   animations: GLTFAction[]
 }
 
-export function Model(props: JSX.IntrinsicElements['group']) {
+export default function ChineseSwordDaoOfQingDynasty(props: JSX.IntrinsicElements['group']) {
   const { nodes, materials } = useGLTF('/models/chinese_sword_dao_of_qing_dynasty-transformed.glb') as unknown as GLTFResult
   return (
     <group {...props} dispose={null}>
