@@ -23,6 +23,7 @@ export const WeaponDisplay = ({
 	const finalPosition: [number, number, number] = [1.5, 0, -1];
 	
 	const isMobile = useMediaQuery({query: '(max-width: 768px)'});
+	const isTouchDevice = useMediaQuery({ query: '(pointer: coarse)' })
 	
 	const {progress} = useProgress();
 	
@@ -79,9 +80,12 @@ export const WeaponDisplay = ({
 						
 						{progress.toFixed(0) === "100" && <Environment preset="sunset"/>}
 						<OrbitControls
+							enabled={!isTouchDevice}
 							target={finalPosition}
 							enableZoom={false}
 							enablePan={false}
+							autoRotate={isTouchDevice}
+							autoRotateSpeed={2}
 						/>
 					</Suspense>
 				</Canvas>
