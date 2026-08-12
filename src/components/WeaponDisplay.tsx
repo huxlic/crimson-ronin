@@ -67,7 +67,7 @@ export const WeaponDisplay = ({
 					<directionalLight position={[3, 5, 2]} intensity={1.8}/>
 					
 					<group ref={groupRef} position={finalPosition}>
-						<ModelComponent scale={isMobile ? 0.5 : scale} position={isMobile ? position : [0, 0, 0]} rotation={rotation}/>
+						<ModelComponent scale={scale} position={isMobile ? position : [0, 0, 0]} rotation={rotation}/>
 					</group>
 					
 					<Environment preset="night"/>
