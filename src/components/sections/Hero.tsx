@@ -39,7 +39,7 @@ export const Hero = () => {
 						<img src={ronin_seal} className={"z-0 w-30 blur-[2px] md:w-40 lg:w-50 animate-ping"}
 						     alt="a seal showing crimson ronin written in japanese"/>
 						<h1
-							className={"z-10 blur-[2px] text-end font-long-cang font-black text-4xl md:text-6xl lg:text-8xl text-wuxia/80 break-all select-none"}>CRIMSON<br/>
+							className={"z-10 blur-[3px] text-end font-long-cang font-black text-4xl md:text-6xl lg:text-8xl text-wuxia/80 break-all select-none"}>CRIMSON<br/>
 							RONIN
 						</h1>
 					</div>
@@ -69,7 +69,6 @@ export const Hero = () => {
 							))}
 						</div>
 					</div>
-				
 				</div>
 			</section>
 		</>

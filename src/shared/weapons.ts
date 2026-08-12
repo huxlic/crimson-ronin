@@ -13,7 +13,7 @@ const weapons: Weapon[] = [
 		description: "A polearm built for sweeping arcs and long reach, its curved blade favors a mounted rider over a footman. Forged for a general who never returned from the northern passes.",
 		model: AncientChineseDecorativeGlaive,
 		scale: 0.25,
-		position: [2, 0, 0],
+		position: [1, 0, 0],
 		rotation: [5, -6, 1],
 	},
 	{
@@ -21,7 +21,7 @@ const weapons: Weapon[] = [
 		description: "A single-edged blade weighted for fast, decisive cuts rather than parrying. Said to hum before bloodshed — monks once buried it to silence the sound.",
 		model: AncientChineseSword,
 		scale: 8,
-		position: [3, -0.1, 0],
+		position: [2, 0, 0],
 		rotation: [10, -6, 3]
 	},
 	{
@@ -62,7 +62,7 @@ const weapons: Weapon[] = [
 		description: "An oiled-paper umbrella with a reinforced spine, sturdy enough to catch a blade or shield a strike. Carried through a storm that never truly ended.",
 		model: OldTheWagasaJapaneseUmbrella,
 		scale: 1.4,
-		position: [-1, -2, 0],
+		position: [-2, -2, 0],
 		rotation: [0, 0, 0],
 		alt_pos: [-2, -1, 0]
 	},
