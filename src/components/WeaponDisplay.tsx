@@ -13,6 +13,7 @@ export const WeaponDisplay = ({
 	                              scale,
 	                              position,
 	                              rotation,
+	                              alt_pos = [0, 0, 0],
 	                              name,
 	                              description
                               }: WeaponDisplayProps) => {
@@ -20,7 +21,7 @@ export const WeaponDisplay = ({
 	const contentRef = useRef<HTMLDivElement | null>(null);
 	const finalPosition: [number, number, number] = [1.5, 0, -1];
 	
-	const isMobile = useMediaQuery({query: '(min-width: 768px)'});
+	const isMobile = useMediaQuery({query: '(max-width: 768px)'});
 	
 	useGSAP(() => {
 		if (!groupRef.current) return;
@@ -67,17 +68,18 @@ export const WeaponDisplay = ({
 					<directionalLight position={[3, 5, 2]} intensity={1.8}/>
 					
 					<group ref={groupRef} position={finalPosition}>
-						<ModelComponent scale={scale} position={isMobile ? position : [0, 0, 0]} rotation={rotation}/>
+						<ModelComponent scale={isMobile ? scale! / 2 : scale}
+						                position={isMobile ? alt_pos : position} rotation={rotation}/>
 					</group>
 					
-					<Environment preset="night"/>
+					<Environment preset="sunset"/>
 					<OrbitControls
 						target={finalPosition}
 						enableZoom={false}
 						enablePan={false}
 					/>
 				</Canvas>
-				
+			
 			</div>
 		</>
 	);

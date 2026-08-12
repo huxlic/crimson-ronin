@@ -78,12 +78,12 @@ export const Carousel = () => {
 				
 				<button
 					onClick={() => handleManualNav(prevSlide)}
-					className={"w-8 sm:w-10 md:w-12 lg:w-15 absolute left-4 top-1/2 -translate-y-1/2 invert-30 hover:invert-0 z-10"}>
+					className={"w-8 sm:w-10 md:w-12 lg:w-15 absolute left-4 top-1/2 -translate-y-1/2 invert-30 hover:invert-0 z-10 cursor-pointer"}>
 					<img draggable={false} className={""} src={left_arrow} alt="left arrow"/>
 				</button>
 				<button
 					onClick={() => handleManualNav(nextSlide)}
-					className={"w-8 sm:w-10 md:w-12 lg:w-15 absolute right-4 top-1/2 -translate-y-1/2 invert-30 hover:invert-0 z-10"}>
+					className={"w-8 sm:w-10 md:w-12 lg:w-15 absolute right-4 top-1/2 -translate-y-1/2 invert-30 hover:invert-0 z-10 cursor-pointer"}>
 					<img draggable={false} className={""} src={right_arrow} alt="right arrow"/>
 				</button>
 			</div>

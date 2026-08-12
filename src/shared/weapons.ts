@@ -14,14 +14,14 @@ const weapons: Weapon[] = [
 		model: AncientChineseDecorativeGlaive,
 		scale: 0.25,
 		position: [2, 0, 0],
-		rotation: [5, -6, 1]
+		rotation: [5, -6, 1],
 	},
 	{
 		name: "Whispering Edge",
 		description: "A single-edged blade weighted for fast, decisive cuts rather than parrying. Said to hum before bloodshed — monks once buried it to silence the sound.",
 		model: AncientChineseSword,
 		scale: 8,
-		position: [3, 1, 0],
+		position: [3, -0.1, 0],
 		rotation: [10, -6, 3]
 	},
 	{
@@ -30,7 +30,8 @@ const weapons: Weapon[] = [
 		model: ChineseHandFan,
 		scale: 0.7,
 		position: [3, -1, 0],
-		rotation: [-1.5, 1, 3]
+		rotation: [-1.5, 1, 3],
+		alt_pos: [0, -0.5, 0]
 	},
 	{
 		name: "Dao of the Fallen Throne",
@@ -62,7 +63,8 @@ const weapons: Weapon[] = [
 		model: OldTheWagasaJapaneseUmbrella,
 		scale: 1.4,
 		position: [-1, -2, 0],
-		rotation: [0, 0, 0]
+		rotation: [0, 0, 0],
+		alt_pos: [-2, -1, 0]
 	},
 ]
 
