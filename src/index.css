@@ -11,3 +11,41 @@
     --color-wuxia: #CD9C61;
     --color-wuxia-red: #9E1B1B;
 }
+
+@theme {
+    --animate-spin-cube: spin-cube 4s linear infinite;
+}
+
+@keyframes spin-cube {
+    from { transform: rotateX(0deg) rotateY(0deg); }
+    to   { transform: rotateX(360deg) rotateY(360deg); }
+}
+
+@layer components {
+    .glass-cube {
+        filter: drop-shadow(0 0 10px color-mix(in srgb, var(--color-wuxia) 50%, transparent));
+    }
+
+    .face {
+        position: absolute;
+        width: 2.5rem;
+        height: 2.5rem;
+        background: linear-gradient(
+                135deg,
+                color-mix(in srgb, var(--color-wuxia) 35%, transparent),
+                color-mix(in srgb, var(--color-wuxia) 4%, transparent) 60%,
+                color-mix(in srgb, var(--color-wuxia-red) 15%, transparent)
+        );
+        background-size: 200% 200%;
+        box-shadow:
+                inset 0 0 10px color-mix(in srgb, var(--color-wuxia) 30%, transparent),
+                inset 0 0 2px color-mix(in srgb, var(--color-wuxia-red) 40%, transparent);
+        backdrop-filter: blur(2px);
+        animation: sheen 4s infinite linear;
+    }
+
+    @keyframes sheen {
+        0%, 100% { background-position: 0 0; }
+        50% { background-position: 100% 100%; }
+    }
+}

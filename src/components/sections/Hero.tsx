@@ -8,7 +8,8 @@ import buy_btn from "../../assets/images/buy-btn.png";
 import type {PurchaseStore} from "../../types";
 import purchaseStore from "../../shared/purchaseStore.ts";
 import {useMediaQuery} from "react-responsive";
-
+import {Suspense} from "react";
+import {Loader} from "../../Loader.tsx";
 export const Hero = () => {
 	const isMobile = useMediaQuery({query: '(max-width: 768px)'});
 	
@@ -23,13 +24,18 @@ export const Hero = () => {
 					<Canvas id="canvas" camera={{
 						position: [0, 2, 5], fov: 75
 					}}>
-						<ambientLight intensity={0.6}/>
-						<directionalLight position={[3, 5, 2]} intensity={1.5}/>
-						<Samurai position={[0, -11, 0]} scale={isMobile ? 0.07 : 0.075}/>
-						<OrbitControls autoRotate={true} enableRotate={true}
-						               enableZoom={false}
-						               minPolarAngle={Math.PI / 2}
-						               maxPolarAngle={Math.PI / 2}/>
+						
+						<Suspense fallback={
+							<Loader/>
+						}>
+							<ambientLight intensity={0.6}/>
+							<directionalLight position={[3, 5, 2]} intensity={1.5}/>
+							<Samurai position={[0, -11, 0]} scale={isMobile ? 0.07 : 0.075}/>
+							<OrbitControls autoRotate={true} enableRotate={true}
+							               enableZoom={false}
+							               minPolarAngle={Math.PI / 2}
+							               maxPolarAngle={Math.PI / 2}/>
+						</Suspense>
 					</Canvas>
 				</div>
 				
