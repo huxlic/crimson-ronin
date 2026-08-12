@@ -7,7 +7,7 @@ import {useGSAP} from "@gsap/react";
 import type {WeaponDisplayProps} from "../types";
 import underline from "../assets/icons/underline.png";
 import {useMediaQuery} from "react-responsive";
-import {WeaponLoader} from "../WeaponLoader.tsx";
+import {Loader} from "../Loader.tsx";
 
 export const WeaponDisplay = ({
 	                              ModelComponent,
@@ -67,7 +67,7 @@ export const WeaponDisplay = ({
 				</div>
 				
 				<Canvas camera={{position: [0, 0, 5], fov: 45, near: 0.1, far: 10000}}>
-					<Suspense fallback={<WeaponLoader progress={progress}/>}>
+					<Suspense fallback={<Loader/>}>
 						
 						<ambientLight intensity={0.25}/>
 						<directionalLight position={[3, 5, 2]} intensity={1.8}/>

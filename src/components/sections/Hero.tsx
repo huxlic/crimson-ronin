@@ -9,7 +9,7 @@ import type {PurchaseStore} from "../../types";
 import purchaseStore from "../../shared/purchaseStore.ts";
 import {useMediaQuery} from "react-responsive";
 import {Suspense} from "react";
-import {HeroModelLoader} from "../../HeroModelLoader.tsx";
+import {Loader} from "../../Loader.tsx";
 export const Hero = () => {
 	const isMobile = useMediaQuery({query: '(max-width: 768px)'});
 	
@@ -26,7 +26,7 @@ export const Hero = () => {
 					}}>
 						
 						<Suspense fallback={
-							<HeroModelLoader/>
+							<Loader/>
 						}>
 							<ambientLight intensity={0.6}/>
 							<directionalLight position={[3, 5, 2]} intensity={1.5}/>
