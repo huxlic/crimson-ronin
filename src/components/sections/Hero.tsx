@@ -7,8 +7,11 @@ import {Link} from "react-router";
 import buy_btn from "../../assets/images/buy-btn.png";
 import type {PurchaseStore} from "../../types";
 import purchaseStore from "../../shared/purchaseStore.ts";
+import {useMediaQuery} from "react-responsive";
 
 export const Hero = () => {
+	const isMobile = useMediaQuery({query: '(max-width: 768px)'});
+	
 	return (
 		<>
 			<section className={"relative h-screen overflow-hidden flex items-center justify-center box-border"}>
@@ -22,7 +25,7 @@ export const Hero = () => {
 					}}>
 						<ambientLight intensity={0.6}/>
 						<directionalLight position={[3, 5, 2]} intensity={1.5}/>
-						<Samurai position={[0, -11, 0]} scale={0.075}/>
+						<Samurai position={[0, -11, 0]} scale={isMobile ? 0.07 : 0.075}/>
 						<OrbitControls autoRotate={true} enableRotate={true}
 						               enableZoom={false}
 						               minPolarAngle={Math.PI / 2}
@@ -36,7 +39,7 @@ export const Hero = () => {
 						<img src={ronin_seal} className={"z-0 w-30 blur-[2px] md:w-40 lg:w-50 animate-ping"}
 						     alt="a seal showing crimson ronin written in japanese"/>
 						<h1
-							className={"z-10 blur-[2px] text-end font-long-cang font-black text-4xl md:text-6xl lg:text-8xl text-wuxia/80 break-all select-none"}>CRIMSON<br/>
+							className={"z-10 blur-[3px] text-end font-long-cang font-black text-4xl md:text-6xl lg:text-8xl text-wuxia/80 break-all select-none"}>CRIMSON<br/>
 							RONIN
 						</h1>
 					</div>
@@ -66,7 +69,6 @@ export const Hero = () => {
 							))}
 						</div>
 					</div>
-				
 				</div>
 			</section>
 		</>
