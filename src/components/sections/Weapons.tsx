@@ -14,12 +14,12 @@ export const Weapons = () => {
 			         className={"w-full relative h-screen bg-no-repeat bg-cover overflow-hidden"}>
 				<WeaponDisplay ModelComponent={weapons[currentWeaponIndex].model} {...weapons[currentWeaponIndex]} />
 				
-				<div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-7 gap-2 absolute bottom-0 w-full">
+				<div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-7 gap-2 absolute bottom-0 w-full p-2">
 					{weapons.map((weapon, i) => (
 						<button onClick={() => setCurrentWeaponIndex(i)} key={weapon.name}
 						        title={weapon.name}
 						        style={{backgroundImage: `url(${button_texture})`}}
-							        className={clsx("relative w-full text-[14px] lg:text-[16px] line-clamp-1 md:line-clamp-3 box-border text-wuxia font-marcellus font-black py-3 px-2 lg:px-4 border-2 bg-center bg-cover hover:invert-20 transition-all duration-100 cursor-pointer", i === currentWeaponIndex ? "shadow-wuxia shadow-sm border-wuxia-red" : "border-wuxia-red/20 hover:border-wuxia/20")}>
+							        className={clsx("relative w-full text-[14px] lg:text-[16px] line-clamp-1 md:line-clamp-2 box-border text-wuxia font-marcellus font-black px-1 border-2 bg-center bg-cover hover:invert-20 transition-all duration-100 cursor-pointer", i === currentWeaponIndex ? "shadow-[0_-4px_20px_-8px_#CD9C61] border-wuxia-red" : "border-wuxia-red/20 hover:border-wuxia/20")}>
 							{weapon.name}
 						</button>
 					))}

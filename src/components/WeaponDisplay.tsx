@@ -6,6 +6,7 @@ import * as THREE from "three";
 import {useGSAP} from "@gsap/react";
 import type {WeaponDisplayProps} from "../types";
 import underline from "../assets/icons/underline.png";
+import {useMediaQuery} from "react-responsive";
 
 export const WeaponDisplay = ({
 	                              ModelComponent,
@@ -18,6 +19,8 @@ export const WeaponDisplay = ({
 	const groupRef = useRef<THREE.Group | null>(null);
 	const contentRef = useRef<HTMLDivElement | null>(null);
 	const finalPosition: [number, number, number] = [1.5, 0, -1];
+	
+	const isMobile = useMediaQuery({query: '(min-width: 768px)'});
 	
 	useGSAP(() => {
 		if (!groupRef.current) return;
@@ -48,12 +51,23 @@ export const WeaponDisplay = ({
 	return (
 		<>
 			<div className="absolute inset-0">
+				<div ref={contentRef}
+				     className="absolute h-max left-0 right-0 top-0 pt-20 sm:pt-24 md:top-1/3 md:right-1/2 md:pt-0 flex flex-col gap-3 sm:gap-4 justify-start px-6 sm:px-8 md:px-16 bg-linear-to-b from-black/70 via-black/30 to-transparent md:bg-none">
+					<h3
+						className="w-max max-w-full relative text-center font-long-cang text-wuxia text-3xl sm:text-4xl md:text-5xl font-black uppercase">
+						{name}
+						<img draggable={false} src={underline} alt="underline"
+						     className="w-1/2 h-0.5 justify-self-center"/>
+					</h3>
+					<p className="text-white font-marcellus text-sm sm:text-base max-w-prose">{description}</p>
+				</div>
+				
 				<Canvas camera={{position: [0, 0, 5], fov: 45, near: 0.1, far: 10000}}>
 					<ambientLight intensity={0.25}/>
 					<directionalLight position={[3, 5, 2]} intensity={1.8}/>
 					
 					<group ref={groupRef} position={finalPosition}>
-						<ModelComponent scale={scale} position={position} rotation={rotation}/>
+						<ModelComponent scale={isMobile ? 0.5 : scale} position={isMobile ? position : [0, 0, 0]} rotation={rotation}/>
 					</group>
 					
 					<Environment preset="night"/>
@@ -64,16 +78,6 @@ export const WeaponDisplay = ({
 					/>
 				</Canvas>
 				
-				<div ref={contentRef}
-					className="absolute h-max left-0 right-0 top-0 pt-20 sm:pt-24 md:top-1/3 md:right-1/2 md:pt-0 flex flex-col gap-3 sm:gap-4 justify-start px-6 sm:px-8 md:px-16 bg-linear-to-b from-black/70 via-black/30 to-transparent md:bg-none">
-					<h3
-						className="w-max max-w-full relative text-center font-long-cang text-wuxia text-3xl sm:text-4xl md:text-5xl font-black uppercase">
-						{name}
-						<img draggable={false} src={underline} alt="underline"
-						     className="w-1/2 h-0.5 justify-self-center"/>
-					</h3>
-					<p className="text-white font-marcellus text-sm sm:text-base md:text-lg max-w-prose">{description}</p>
-				</div>
 			</div>
 		</>
 	);
