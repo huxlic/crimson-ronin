@@ -1,12 +1,13 @@
-import {Environment, OrbitControls} from "@react-three/drei";
+import {Environment, OrbitControls, useProgress} from "@react-three/drei";
 import {Canvas} from "@react-three/fiber";
-import {useRef} from "react";
+import {Suspense, useRef} from "react";
 import gsap from "gsap";
 import * as THREE from "three";
 import {useGSAP} from "@gsap/react";
 import type {WeaponDisplayProps} from "../types";
 import underline from "../assets/icons/underline.png";
 import {useMediaQuery} from "react-responsive";
+import {WeaponLoader} from "../WeaponLoader.tsx";
 
 export const WeaponDisplay = ({
 	                              ModelComponent,
@@ -22,6 +23,8 @@ export const WeaponDisplay = ({
 	const finalPosition: [number, number, number] = [1.5, 0, -1];
 	
 	const isMobile = useMediaQuery({query: '(max-width: 768px)'});
+	
+	const {progress} = useProgress();
 	
 	useGSAP(() => {
 		if (!groupRef.current) return;
@@ -64,20 +67,23 @@ export const WeaponDisplay = ({
 				</div>
 				
 				<Canvas camera={{position: [0, 0, 5], fov: 45, near: 0.1, far: 10000}}>
-					<ambientLight intensity={0.25}/>
-					<directionalLight position={[3, 5, 2]} intensity={1.8}/>
-					
-					<group ref={groupRef} position={finalPosition}>
-						<ModelComponent scale={isMobile ? scale! / 2 : scale}
-						                position={isMobile ? alt_pos : position} rotation={rotation}/>
-					</group>
-					
-					<Environment preset="sunset"/>
-					<OrbitControls
-						target={finalPosition}
-						enableZoom={false}
-						enablePan={false}
-					/>
+					<Suspense fallback={<WeaponLoader progress={progress}/>}>
+						
+						<ambientLight intensity={0.25}/>
+						<directionalLight position={[3, 5, 2]} intensity={1.8}/>
+						
+						<group ref={groupRef} position={finalPosition}>
+							<ModelComponent scale={isMobile ? scale! / 2 : scale}
+							                position={isMobile ? alt_pos : position} rotation={rotation}/>
+						</group>
+						
+						{progress.toFixed(0) === "100" && <Environment preset="sunset"/>}
+						<OrbitControls
+							target={finalPosition}
+							enableZoom={false}
+							enablePan={false}
+						/>
+					</Suspense>
 				</Canvas>
 			
 			</div>
