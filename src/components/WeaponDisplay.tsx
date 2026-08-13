@@ -63,7 +63,7 @@ export const WeaponDisplay = ({
 						<img draggable={false} src={underline} alt="underline"
 						     className="w-1/2 h-0.5 justify-self-center"/>
 					</h3>
-					<p className="text-white font-marcellus text-sm sm:text-base max-w-prose">{description}</p>
+					<p className="text-white  text-sm sm:text-base max-w-prose">{description}</p>
 				</div>
 				
 				<Canvas camera={{position: [0, 0, 5], fov: 45, near: 0.1, far: 10000}}>
@@ -72,7 +72,6 @@ export const WeaponDisplay = ({
 							<ModelComponent scale={isMobile ? scale! / 2 : scale}
 							                position={isMobile ? alt_pos : position} rotation={rotation}/>
 						</group>
-						
 						<OrbitControls
 							target={finalPosition}
 							enableZoom={false}

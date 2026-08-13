@@ -3,7 +3,7 @@ import Homepage from "./pages/Homepage.tsx";
 
 const App = () => {
 	return (
-		<div className={""}>
+		<div className={"font-marcellus"}>
 			<Routes>
 				<Route path="/" element={<Homepage/>} />
 			</Routes>
