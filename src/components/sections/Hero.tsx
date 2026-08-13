@@ -15,7 +15,7 @@ export const Hero = () => {
 	
 	return (
 		<>
-			<section className={"relative h-screen overflow-hidden flex items-center justify-center box-border"}>
+			<section className={"relative h-dvh overflow-hidden flex items-center justify-center box-border"}>
 				<div className="absolute inset-0 bg-cover blur-[2px]"
 				     style={{backgroundImage: `url(${landscape})`}}></div>
 				<div className="bg-[#000000cc] absolute inset-0"></div>
