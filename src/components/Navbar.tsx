@@ -38,7 +38,7 @@ export const Navbar = () => {
 					</button>
 
 					{/* Navigation links - desktop */}
-					<ul className="hidden md:flex items-center font-marcellus gap-6 sm:gap-8">
+					<ul className="hidden md:flex items-center  gap-6 sm:gap-8">
 						{navLinks.map(({href, title, icon: Icon}: NavLinks) => (
 							<li key={title}
 							    className="text-[#ffffff99] hover:text-wuxia text-[12px] sm:text-sm transition-colors duration-300 gap-1 whitespace-nowrap">
@@ -56,7 +56,7 @@ export const Navbar = () => {
 					{/* Mobile menu dropdown */}
 					{isMobileMenuOpen && (
 						<div className="md:hidden absolute top-full left-0 right-0 bg-[#0D0F11] py-6 border-t border-white/10">
-							<ul className="flex flex-col items-center gap-4 font-marcellus">
+							<ul className="flex flex-col items-center gap-4 ">
 								{navLinks.map(({href, title, icon: Icon}: NavLinks) => (
 									<li key={title} className="w-full text-center">
 										<NavLink

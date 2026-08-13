@@ -10,15 +10,17 @@ import purchaseStore from "../../shared/purchaseStore.ts";
 import {useMediaQuery} from "react-responsive";
 import {Suspense} from "react";
 import {Loader} from "../../Loader.tsx";
+
 export const Hero = () => {
 	const isMobile = useMediaQuery({query: '(max-width: 768px)'});
 	
 	return (
 		<>
-			<section className={"relative h-dvh overflow-hidden flex items-center justify-center box-border"}>
+			<section
+				className={"relative h-dvh overflow-hidden flex items-center justify-center box-border select-none"}>
 				<div className="absolute inset-0 bg-cover blur-[2px]"
 				     style={{backgroundImage: `url(${landscape})`}}></div>
-				<div className="bg-[#000000cc] absolute inset-0"></div>
+				<div className="bg-[#000000CC] absolute inset-0"></div>
 				
 				<div className="absolute inset-0">
 					<Canvas id="canvas" camera={{
@@ -45,13 +47,13 @@ export const Hero = () => {
 						<img src={ronin_seal} className={"z-0 w-30 blur-[2px] md:w-40 lg:w-50 animate-ping"}
 						     alt="a seal showing crimson ronin written in japanese"/>
 						<h1
-							className={"z-10 blur-[3px] text-end font-long-cang font-black text-4xl md:text-6xl lg:text-8xl text-wuxia/80 break-all select-none"}>CRIMSON<br/>
-							RONIN
+							className={"z-10 blur-[3px] text-end font-long-cang font-black text-4xl md:text-6xl lg:text-8xl text-wuxia/80 select-none"}>
+							CRIMSON <br/> RONIN
 						</h1>
 					</div>
 					
 					<div className="flex flex-col items-center gap-4">
-						<p className={"font-marcellus text-[#ffffff99] text-center text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl max-w-2xl mx-auto leading-relaxed"}>Wander
+						<p className={" text-[#ffffff99] text-center text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl max-w-2xl mx-auto leading-relaxed"}>Wander
 							far enough, and the past
 							finds you first.
 						</p>
@@ -61,7 +63,7 @@ export const Hero = () => {
 							     className={"w-28 md:w-36 lg:w-40 xl:w-50 hover:scale-105 transition-transform duration-300"}
 							     alt="a gold buy now cta"/>
 							<div
-								className="absolute inset-0 flex items-center justify-center font-marcellus font-black text-white text-[12px] md:text-[14px] lg:text-[16px]">
+								className="absolute inset-0 flex items-center justify-center  font-black text-white text-[12px] md:text-[14px] lg:text-[16px]">
 								<span className={""}>Buy now</span>
 							</div>
 						</Link>

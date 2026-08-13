@@ -17,7 +17,7 @@ export const News = () => {
 					<source src={trailer} type="video/mp4"/>
 				</video>
 				{/* Gradient Overlay - Starts from middle (50%) of video */}
-				<div className="absolute inset-0 bg-linear-to-t from-black via-black/60 at-50% to-transparent backdrop-blur-[2px]"/>
+				<div className="absolute inset-0 bg-linear-to-t from-black via-black/70 at-50% to-transparent"/>
 				
 				
 				{/* News Content - Positioned in the gradient area (bottom half) */}
