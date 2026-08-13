@@ -1,5 +1,5 @@
 import background_texture from "../../assets/images/background-texture.png";
-import {WeaponDisplay} from "../WeaponDisplay.tsx";
+import {WeaponDisplay} from "../ui/WeaponDisplay.tsx";
 import weapons from "../../shared/weapons.ts";
 import {useState} from "react";
 import button_texture from "../../assets/images/button-texture.png";

@@ -32,7 +32,10 @@ export interface Weapon {
 	scale: number;
 	position: [number, number, number];
 	rotation: [number, number, number];
-	alt_pos?: [number, number, number];
+	altPos?: [number, number, number];
+	assetTitle: string;
+	assetUrl: string;
+	author: string;
 }
 
 export interface WeaponDisplayProps {
@@ -44,7 +47,7 @@ export interface WeaponDisplayProps {
 	scale?: number;
 	position?: [number, number, number];
 	rotation?: [number, number, number];
-	alt_pos?: [number, number, number];
+	altPos?: [number, number, number];
 	name: string;
 	description: string;
 }

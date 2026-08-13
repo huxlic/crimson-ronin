@@ -1,6 +1,6 @@
-import type {NewsItem} from "../types";
-import noise from '../assets/images/noise.png';
-import item_msg from '../assets/images/item-msg.png'
+import type {NewsItem} from "../../types";
+import noise from '../../assets/images/noise.png';
+import item_msg from '../../assets/images/item-msg.png'
 
 export const Article = ({id, title, date, excerpt, image, category}: NewsItem) => {
 	return (

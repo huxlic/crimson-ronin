@@ -1,8 +1,8 @@
-import logo from "../assets/icons/crimson-ronin-logo.png"
-import samurai from "../assets/icons/samurai.png"
+import logo from "../../assets/icons/crimson-ronin-logo.png"
+import samurai from "../../assets/icons/samurai.png"
 import {Link, NavLink} from "react-router";
-import {navLinks} from "../shared/navLinks.ts";
-import type {NavLinks} from "../types";
+import {navLinks} from "../../shared/navLinks.ts";
+import type {NavLinks} from "../../types";
 import {useState} from "react";
 
 export const Navbar = () => {

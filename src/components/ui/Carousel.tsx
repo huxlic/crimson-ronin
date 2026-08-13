@@ -1,8 +1,8 @@
-import latestNews from "../shared/latestNews.ts";
+import latestNews from "../../shared/latestNews.ts";
 import {Article} from "./Article.tsx";
 import clsx from "clsx";
-import left_arrow from "../assets/icons/left-arrow.png";
-import right_arrow from "../assets/icons/right-arrow.png";
+import left_arrow from "../../assets/icons/left-arrow.png";
+import right_arrow from "../../assets/icons/right-arrow.png";
 import {useCallback, useEffect, useRef, useState} from "react";
 import {useGSAP} from "@gsap/react";
 import {gsap} from "gsap";
