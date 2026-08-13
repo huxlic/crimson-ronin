@@ -8,6 +8,7 @@ import type {WeaponDisplayProps} from "../../types";
 import underline from "../../assets/icons/underline.png";
 import {useMediaQuery} from "react-responsive";
 import {Loader} from "../../Loader.tsx";
+import {Credit} from "./Credit.tsx";
 
 export const WeaponDisplay = ({
 	                              ModelComponent,
@@ -16,7 +17,10 @@ export const WeaponDisplay = ({
 	                              rotation,
 	                              altPos = [0, 0, 0],
 	                              name,
-	                              description
+	                              description,
+	                              assetTitle,
+	                              assetUrl,
+	                              author
                               }: WeaponDisplayProps) => {
 	const groupRef = useRef<THREE.Group | null>(null);
 	const contentRef = useRef<HTMLDivElement | null>(null);
@@ -65,6 +69,8 @@ export const WeaponDisplay = ({
 					</h3>
 					<p className="text-white  text-sm sm:text-base max-w-prose">{description}</p>
 				</div>
+				
+				<Credit assetTitle={assetTitle} assetUrl={assetUrl} author={author} />
 				
 				<Canvas camera={{position: [0, 0, 5], fov: 45, near: 0.1, far: 10000}}>
 					<Suspense fallback={<Loader/>}>
