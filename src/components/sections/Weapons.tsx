@@ -11,7 +11,7 @@ export const Weapons = () => {
 	return (
 		<>
 			<section style={{backgroundImage: `url(${background_texture})`}}
-			         className={"w-full relative h-screen bg-no-repeat bg-cover overflow-hidden"}>
+			         className={"w-full relative h-dvh bg-no-repeat bg-cover overflow-hidden"}>
 				<WeaponDisplay ModelComponent={weapons[currentWeaponIndex].model} {...weapons[currentWeaponIndex]} />
 				
 				<div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-7 gap-2 absolute bottom-0 w-full p-2">
