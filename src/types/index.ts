@@ -50,7 +50,4 @@ export interface WeaponDisplayProps {
 	altPos?: [number, number, number];
 	name: string;
 	description: string;
-	assetTitle: string;
-	assetUrl: string;
-	author: string;
 }
