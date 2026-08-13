@@ -1,4 +1,4 @@
-import {Environment, OrbitControls, useProgress} from "@react-three/drei";
+import {Environment, OrbitControls} from "@react-three/drei";
 import {Canvas} from "@react-three/fiber";
 import {Suspense, useRef} from "react";
 import gsap from "gsap";
@@ -24,12 +24,8 @@ export const WeaponDisplay = ({
 	
 	const isMobile = useMediaQuery({query: '(max-width: 768px)'});
 	
-	const {progress} = useProgress();
-	
 	useGSAP(() => {
-		if (!groupRef.current) return;
-		if (!contentRef.current) return;
-		
+		if (groupRef.current) {
 		gsap.fromTo(
 			groupRef.current.position,
 			{x: finalPosition[0] + 4},
@@ -39,7 +35,8 @@ export const WeaponDisplay = ({
 				ease: "power3.out",
 			}
 		);
-		
+		}
+		if (contentRef.current) {
 		gsap.fromTo(
 			contentRef.current,
 			{x: -400, opacity: 0},
@@ -50,6 +47,9 @@ export const WeaponDisplay = ({
 				ease: "power3.out",
 			}
 		);
+		}
+		
+		
 	}, [ModelComponent]);
 	
 	return (
@@ -68,22 +68,18 @@ export const WeaponDisplay = ({
 				
 				<Canvas camera={{position: [0, 0, 5], fov: 45, near: 0.1, far: 10000}}>
 					<Suspense fallback={<Loader/>}>
-						
-						<ambientLight intensity={0.25}/>
-						<directionalLight position={[3, 5, 2]} intensity={1.8}/>
-						
 						<group ref={groupRef} position={finalPosition}>
 							<ModelComponent scale={isMobile ? scale! / 2 : scale}
 							                position={isMobile ? alt_pos : position} rotation={rotation}/>
 						</group>
 						
-						{progress.toFixed(0) === "100" && <Environment preset="sunset"/>}
 						<OrbitControls
 							target={finalPosition}
 							enableZoom={false}
 							enablePan={false}
 							autoRotateSpeed={2}
 						/>
+						<Environment files="/hdri/old_room_2k.hdr" background={false} />
 					</Suspense>
 				</Canvas>
 			
