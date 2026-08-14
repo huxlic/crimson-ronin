@@ -1,27 +1,26 @@
 # Crimson Ronin
 
-A cinematic, wuxia/samurai-themed portfolio site built as a fictional AAA game reveal — blending interactive 3D, ink-wash visual direction, and scroll-driven storytelling into a single immersive experience.
+A cinematic, wuxia/samurai-themed portfolio site built as a fictional AAA game reveal, blending interactive 3D, ink-wash visual direction, and scroll-driven storytelling into a single immersive experience.
 
-Inspired by titles like *Where Winds Meet* and *Crimson Desert*, Crimson Ronin isn't a traditional "here's my résumé" portfolio — it's a self-contained world: a hero character, a weapon armory, character lore, and a news feed, all wrapped in a custom gold-and-crimson identity.
+Inspired by titles like *Where Winds Meet* and *Crimson Desert*, Crimson Ronin isn't a traditional "here's my résumé" portfolio — it's a self-contained world: a hero character, a weapon armory, character lore, and news feed, all wrapped in a custom gold-and-crimson identity.
 
 ## ✦ Features
 
 - **Interactive 3D weapon showcase** — real-time R3F models with custom per-weapon transforms, orbit controls, and mobile-aware touch handling
-- **Cinematic scroll experience** — GSAP-driven section transitions, snap-to-section scrolling, and slide-in reveals
-- **Custom loading experience** — a self-built glass-cube loader with live progress tracking via `useProgress`
+- **Cinematic scroll experience** — GSAP-driven section transitions and slide-in reveals
+- **Custom loading experience** — a self-built glass-cube loader with live progress
 - **Infinite carousel** — custom-built, no external carousel dependency
 - **Ink-wash aesthetic system** — a full custom design language: brand palette, typography (self-hosted custom font), and motion style tuned to the theme
-- **Performance-conscious 3D pipeline** — self-hosted compressed HDRI lighting, preloaded/compressed models, and device-aware interaction (auto-rotate on touch, manual orbit on desktop)
+- **Performance-conscious 3D pipeline** — self-hosted compressed HDRI lighting, preloaded/compressed models, and device-aware interaction
 
 ## ✦ Tech Stack
 
 | Layer     | Tools                             |
 |-----------|-----------------------------------|
-| Framework | React, TypeScript, Next.js        |
+| Framework | React, TypeScript                 |
 | 3D        | React Three Fiber, drei, Three.js |
-| Animation | GSAP (ScrollTrigger, SplitText)   |
+| Animation | GSAP (ScrollTrigger)              |
 | Styling   | Tailwind CSS v4                   |
-| State     | Zustand                           |
 
 ## ✦ Design Direction
 
