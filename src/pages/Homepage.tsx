@@ -1,4 +1,4 @@
-import {Navbar} from "../components/Navbar.tsx";
+import {Navbar} from "../components/ui/Navbar.tsx";
 import {Hero} from "../components/sections/Hero.tsx";
 import {News} from "../components/sections/News.tsx";
 import {Weapons} from "../components/sections/Weapons.tsx";

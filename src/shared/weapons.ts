@@ -15,6 +15,9 @@ const weapons: Weapon[] = [
 		scale: 0.25,
 		position: [1, 0, 0],
 		rotation: [5, -6, 1],
+		assetTitle: "Ancient chinese decorative glaive",
+		assetUrl: "https://skfb.ly/o9WCY",
+		author: "AbhinavRaj50"
 	},
 	{
 		name: "Whispering Edge",
@@ -22,7 +25,10 @@ const weapons: Weapon[] = [
 		model: AncientChineseSword,
 		scale: 8,
 		position: [2, 0, 0],
-		rotation: [10, -6, 3]
+		rotation: [10, -6, 3],
+		assetTitle: "Ancient Chinese Sword",
+		assetUrl: "https://skfb.ly/XOHH",
+		author: "Johanes Chendra"
 	},
 	{
 		name: "Fan of the Wandering Court",
@@ -31,7 +37,10 @@ const weapons: Weapon[] = [
 		scale: 0.7,
 		position: [3, -1, 0],
 		rotation: [-1.5, 1, 3],
-		alt_pos: [0, -0.5, 0]
+		altPos: [0, -0.5, 0],
+		assetTitle: "Chinese Hand Fan",
+		assetUrl: "https://skfb.ly/o7MuY",
+		author: "Alex Sanches"
 	},
 	{
 		name: "Dao of the Fallen Throne",
@@ -39,7 +48,10 @@ const weapons: Weapon[] = [
 		model: ChineseSwordDaoOfQingDynasty,
 		scale: 0.005,
 		position: [2, 0, 0],
-		rotation: [-1.5, 1, 3]
+		rotation: [-1.5, 1, 3],
+		assetTitle: "Chinese Sword Dao of Qing Dynasty",
+		assetUrl: "https://skfb.ly/ouNMH",
+		author: "leeeck"
 	},
 	{
 		name: "Han Reliquary Blade",
@@ -47,7 +59,10 @@ const weapons: Weapon[] = [
 		model: ChineseSwordHanJian,
 		scale: 0.03,
 		position: [2, 0, 0],
-		rotation: [-1.5, 1, Math.PI / 4]
+		rotation: [-1.5, 1, Math.PI / 4],
+		assetTitle: "Chinese Sword - Han Jian",
+		assetUrl: "https://skfb.ly/oAxLZ",
+		author: "Zufa"
 	},
 	{
 		name: "Jian of Quiet Ruin",
@@ -55,7 +70,10 @@ const weapons: Weapon[] = [
 		model: JianStyledSword,
 		scale: 0.6,
 		position: [2, 0, 0],
-		rotation: [-2.5, 0, 2]
+		rotation: [-2.5, 0, 2],
+		assetTitle: "Jian Styled Sword",
+		assetUrl: "https://skfb.ly/6uoxM",
+		author: "iceboxX708"
 	},
 	{
 		name: "Wagasa of the Last Rain",
@@ -64,7 +82,10 @@ const weapons: Weapon[] = [
 		scale: 1.4,
 		position: [-2, -2, 0],
 		rotation: [0, 0, 0],
-		alt_pos: [-2, -1, 0]
+		altPos: [-2, -1, 0],
+		assetTitle: "[FREE] 3d Old The Wagasa  Japanese Umbrella V.3",
+		assetUrl: "https://skfb.ly/pLSO7",
+		author: "shadowdarkdemon2"
 	},
 ]
 

@@ -1,5 +1,5 @@
 import trailer from "../../assets/videos/crimson-trailer-video.mp4";
-import {Carousel} from "../Carousel.tsx";
+import {Carousel} from "../ui/Carousel.tsx";
 
 export const News = () => {
 	

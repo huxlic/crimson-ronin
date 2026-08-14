@@ -4,17 +4,17 @@ import {Suspense, useRef} from "react";
 import gsap from "gsap";
 import * as THREE from "three";
 import {useGSAP} from "@gsap/react";
-import type {WeaponDisplayProps} from "../types";
-import underline from "../assets/icons/underline.png";
+import type {WeaponDisplayProps} from "../../types";
+import underline from "../../assets/icons/underline.png";
 import {useMediaQuery} from "react-responsive";
-import {Loader} from "../Loader.tsx";
+import {Loader} from "../../Loader.tsx";
 
 export const WeaponDisplay = ({
 	                              ModelComponent,
 	                              scale,
 	                              position,
 	                              rotation,
-	                              alt_pos = [0, 0, 0],
+	                              altPos = [0, 0, 0],
 	                              name,
 	                              description
                               }: WeaponDisplayProps) => {
@@ -70,13 +70,12 @@ export const WeaponDisplay = ({
 					<Suspense fallback={<Loader/>}>
 						<group ref={groupRef} position={finalPosition}>
 							<ModelComponent scale={isMobile ? scale! / 2 : scale}
-							                position={isMobile ? alt_pos : position} rotation={rotation}/>
+							                position={isMobile ? altPos : position} rotation={rotation}/>
 						</group>
 						<OrbitControls
 							target={finalPosition}
 							enableZoom={false}
 							enablePan={false}
-							autoRotateSpeed={2}
 						/>
 						<Environment files="/hdri/old_room_2k.hdr" background={false} />
 					</Suspense>
