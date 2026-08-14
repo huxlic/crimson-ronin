@@ -26,7 +26,6 @@ Inspired by titles like *Where Winds Meet* and *Crimson Desert*, Crimson Ronin i
 
 - **Palette:** `#CD9C61` (gold) · `#9E1B1B` (crimson)
 - **Typography:** custom self-hosted display font paired with clean UI type
-- **Motion:** slow, deliberate, cinematic — favoring restraint over flash
 
 ## ✦ Status
 
