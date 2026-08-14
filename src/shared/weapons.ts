@@ -9,6 +9,18 @@ import type {Weapon} from "../types";
 
 const weapons: Weapon[] = [
 	{
+		name: "Wagasa of the Last Rain",
+		description: "An oiled-paper umbrella with a reinforced spine, sturdy enough to catch a blade or shield a strike. Carried through a storm that never truly ended.",
+		model: OldTheWagasaJapaneseUmbrella,
+		scale: 1.4,
+		position: [-2, -2, 0],
+		rotation: [0, 0, 0],
+		altPos: [-2, -1, 0],
+		assetTitle: "[FREE] 3d Old The Wagasa  Japanese Umbrella V.3",
+		assetUrl: "https://skfb.ly/pLSO7",
+		author: "shadowdarkdemon2"
+	},
+	{
 		name: "The Widow's Glaive",
 		description: "A polearm built for sweeping arcs and long reach, its curved blade favors a mounted rider over a footman. Forged for a general who never returned from the northern passes.",
 		model: AncientChineseDecorativeGlaive,
@@ -74,18 +86,6 @@ const weapons: Weapon[] = [
 		assetTitle: "Jian Styled Sword",
 		assetUrl: "https://skfb.ly/6uoxM",
 		author: "iceboxX708"
-	},
-	{
-		name: "Wagasa of the Last Rain",
-		description: "An oiled-paper umbrella with a reinforced spine, sturdy enough to catch a blade or shield a strike. Carried through a storm that never truly ended.",
-		model: OldTheWagasaJapaneseUmbrella,
-		scale: 1.4,
-		position: [-2, -2, 0],
-		rotation: [0, 0, 0],
-		altPos: [-2, -1, 0],
-		assetTitle: "[FREE] 3d Old The Wagasa  Japanese Umbrella V.3",
-		assetUrl: "https://skfb.ly/pLSO7",
-		author: "shadowdarkdemon2"
 	},
 ]
 
