@@ -10,6 +10,7 @@ import purchaseStore from "../../shared/purchaseStore.ts";
 import {useMediaQuery} from "react-responsive";
 import {Suspense} from "react";
 import {Loader} from "../../Loader.tsx";
+import {Credit} from "../ui/Credit.tsx";
 
 export const Hero = () => {
 	const isMobile = useMediaQuery({query: '(max-width: 768px)'});
@@ -17,7 +18,7 @@ export const Hero = () => {
 	return (
 		<>
 			<section
-				className={"relative h-dvh overflow-hidden flex items-center justify-center box-border select-none"}>
+				className={"relative h-dvh overflow-hidden flex flex-col items-center justify-center box-border select-none"}>
 				<div className="absolute inset-0 bg-cover blur-[2px]"
 				     style={{backgroundImage: `url(${landscape})`}}></div>
 				<div className="bg-[#000000CC] absolute inset-0"></div>
@@ -78,6 +79,10 @@ export const Hero = () => {
 						</div>
 					</div>
 				</div>
+				
+				<Credit assetTitle={"Samurai"} assetUrl={"https://skfb.ly/6DurV"} author={"Mikhail_Kozyrev"}
+				        licenceName={" Creative Commons Attribution-NonCommercial"}
+				        licenceUrl={"http://creativecommons.org/licenses/by-nc/4.0/"}/>
 			</section>
 		</>
 	);
