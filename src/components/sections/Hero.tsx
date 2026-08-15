@@ -82,7 +82,7 @@ export const Hero = () => {
 				
 				<Credit assetTitle={"Samurai"} assetUrl={"https://skfb.ly/6DurV"} author={"Mikhail_Kozyrev"}
 				        licenceName={" Creative Commons Attribution-NonCommercial"}
-				        licenceUrl={"http://creativecommons.org/licenses/by-nc/4.0/"}/>
+				        licenceUrl={"https://creativecommons.org/licenses/by-nc/4.0/"}/>
 			</section>
 		</>
 	);

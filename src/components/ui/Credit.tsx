@@ -3,7 +3,7 @@ export const Credit = ({
 	                       assetUrl,
 	                       author,
 	                       licenceName = "Creative Commons Attribution",
-	                       licenceUrl = "http://creativecommons.org/licenses/by/4.0/"
+	                       licenceUrl = "https://creativecommons.org/licenses/by/4.0/"
                        }: {
 	assetTitle: string;
 	assetUrl: string;
