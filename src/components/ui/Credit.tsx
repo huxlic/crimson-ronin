@@ -8,8 +8,8 @@ export const Credit = ({
 	assetTitle: string;
 	assetUrl: string;
 	author: string;
-	licenceName: string;
-	licenceUrl: string;
+	licenceName?: string;
+	licenceUrl?: string;
 }) => {
 	return (
 		<div
