@@ -7,7 +7,7 @@ import {useGSAP} from "@gsap/react";
 import type {WeaponDisplayProps} from "../../types";
 import underline from "../../assets/icons/underline.png";
 import {useMediaQuery} from "react-responsive";
-import {Loader} from "../../Loader.tsx";
+import {Loader} from "./Loader.tsx";
 
 export const WeaponDisplay = ({
 	                              ModelComponent,

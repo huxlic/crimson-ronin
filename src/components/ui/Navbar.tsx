@@ -14,7 +14,7 @@ export const Navbar = () => {
 				className="fixed top-0 w-full left-0 right-0 box-border px-4 sm:px-6 md:px-8 lg:px-12 bg-linear-to-t from-transparent to-[#0D0F11] z-50">
 				<nav className="flex items-center justify-between w-full py-3 sm:py-4">
 					<Link to="/"
-					      className="w-max h-max font-long-cang text-lg sm:text-xl md:text-2xl mask-b-from-50% text-wuxia flex items-center gap-1 sm:gap-2 uppercase font-bold shrink-0">
+					      className="w-max h-max font-long-cang text-lg sm:text-xl md:text-2xl mask-b-from-50% text-wuxia flex items-center gap-1 sm:gap-2 uppercase font-bold shrink-0 select-none">
 						crimson
 						<img draggable={false} className="w-6 sm:w-8" src={logo}
 						     alt="a logo displaying a crescent and a sword"/>

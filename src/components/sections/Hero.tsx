@@ -9,7 +9,7 @@ import type {PurchaseStore} from "../../types";
 import purchaseStore from "../../shared/purchaseStore.ts";
 import {useMediaQuery} from "react-responsive";
 import {Suspense} from "react";
-import {Loader} from "../../Loader.tsx";
+import {Loader} from "../ui/Loader.tsx";
 import {Credit} from "../ui/Credit.tsx";
 
 export const Hero = () => {
